@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "1a8725d6-e7f1-44bb-85dd-e5d96e2f321e",
+		"name": "todoList - heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有代辦",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://immense-plains-73608.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"immense-plains-73608",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆代辦",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"一起打東東\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://immense-plains-73608.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"immense-plains-73608",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有代辦",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://immense-plains-73608.herokuapp.com/todos",
+					"protocol": "https",
+					"host": [
+						"immense-plains-73608",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆代辦",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://immense-plains-73608.herokuapp.com/todos/af30bd10-ac91-4707-8ff9-8693bfe1dbc7",
+					"protocol": "https",
+					"host": [
+						"immense-plains-73608",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"af30bd10-ac91-4707-8ff9-8693bfe1dbc7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆代辦",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"重新編輯了\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://immense-plains-73608.herokuapp.com/todos/99367db7-aeea-4479-a12a-f618f8978d07",
+					"protocol": "https",
+					"host": [
+						"immense-plains-73608",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"todos",
+						"99367db7-aeea-4479-a12a-f618f8978d07"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
