@@ -78,11 +78,7 @@ const requestListener = (req, res)=>{
             }
             else
             {
-                res.writeHead(200,config.headers);
-                res.write(JSON.stringify({
-                    "status": "success",
-                    "data": todos,
-                }));
+                errHandle(res,"沒有這筆資料");
             }
         }
         else
