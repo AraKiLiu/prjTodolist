@@ -1,9 +1,19 @@
 const http = require('http');
+const mongoose = require('mongoose');
+
 const { join } = require('path');
 const { v4: uuidv4 } = require('uuid');
 const errHandle = require('./errorHandle');
 const config = require('./config');
 const todos = [];
+
+mongoose.connect('mongodb://localhost:27017/hotel')
+.then(()=>{
+    console.log('資料庫連線成功')
+})
+.catch((error)=>{
+    console.log(error)
+});
 
 const requestListener = (req, res)=>{
     let body = "";
